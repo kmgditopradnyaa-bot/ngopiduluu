@@ -1,0 +1,162 @@
+/* ==========================================================================
+   NgopiDuluu - Dark Mode (Tema Malam)
+   Diaktifkan dengan atribut data-theme="dark" pada elemen <html>.
+   ========================================================================== */
+
+/* Palet utama tema gelap — warm espresso */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-primary: #171310;
+  --bg-secondary: #1E1813;
+  --bg-tertiary: #2A211A;
+  --bg-card: #231C16;
+  --text-main: #F1E6D8;
+  --text-muted: #C0A88F;
+  --text-light: #9B8269;
+
+  --primary-brown: #D89A3A;
+  --primary-brown-hover: #E8AC50;
+  --cream: #F1E6D8;
+  --cream-dark: #2A211A;
+  --gold: #D89A3A;
+  --gold-hover: #E8AC50;
+  --gold-light: #B97F1E;
+  --dark-bg: #0E0B09;
+
+  --border-color: rgba(241, 230, 216, 0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 10px 28px rgba(216, 154, 58, 0.25);
+}
+
+/* Navbar */
+html[data-theme="dark"] .navbar {
+  background-color: rgba(23, 19, 16, 0.9);
+  border-bottom-color: rgba(241, 230, 216, 0.08);
+}
+
+html[data-theme="dark"] .navbar.scrolled {
+  background-color: rgba(23, 19, 16, 0.97);
+}
+
+/* Modal */
+html[data-theme="dark"] .modal-content {
+  background-color: var(--bg-card);
+}
+
+/* Newsletter */
+html[data-theme="dark"] .newsletter-box {
+  background-color: var(--bg-tertiary);
+}
+
+html[data-theme="dark"] .newsletter-input {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+/* Header galeri */
+html[data-theme="dark"] .gallery-hero {
+  background-color: var(--bg-secondary);
+}
+
+/* Filter pill galeri — kontras agar tidak bentrok di tema gelap */
+html[data-theme="dark"] .category-pill,
+html[data-theme="dark"] .gallery-pill {
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .category-pill:hover,
+html[data-theme="dark"] .gallery-pill:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .category-pill.active,
+html[data-theme="dark"] .gallery-pill.active {
+  background-color: var(--gold);
+  color: #1B1710;
+  border-color: var(--gold);
+}
+
+/* Filter yang dibuat JavaScript di halaman Menu — disamakan persis dengan Galeri.
+   Font & background memakai variabel tema yang sama dengan .gallery-pill. */
+html[data-theme="dark"] #category-pills-container .category-pill,
+html[data-theme="dark"] #fav-filter-btn.category-pill {
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] #category-pills-container .category-pill:hover,
+html[data-theme="dark"] #fav-filter-btn.category-pill:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] #category-pills-container .category-pill.active,
+html[data-theme="dark"] #fav-filter-btn.category-pill.active {
+  background-color: var(--gold);
+  color: #1B1710;
+  border-color: var(--gold);
+}
+
+/* Tombol gold & outline agar terlihat di latar gelap */
+html[data-theme="dark"] .btn-gold {
+  background-color: var(--gold);
+  color: #FFFFFF;
+}
+
+html[data-theme="dark"] .btn-outline {
+  color: var(--text-main);
+}
+
+/* Tombol favorit di atas gambar menu */
+html[data-theme="dark"] .favorite-btn {
+  background-color: rgba(24, 19, 15, 0.72);
+  color: var(--text-light);
+}
+
+html[data-theme="dark"] .favorite-btn:hover,
+html[data-theme="dark"] .favorite-btn.active {
+  background-color: #FFFFFF;
+  color: #E53935;
+}
+
+/* Footer & stats lebih gelap agar selaras */
+html[data-theme="dark"] .footer {
+  background-color: #100D0A;
+}
+
+html[data-theme="dark"] .stats-section {
+  background-color: #100D0A;
+}
+
+/* ==========================================================================
+   Tombol Sakelar Tema (Sun / Moon)
+   ========================================================================== */
+
+.theme-toggle-btn .icon-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle-btn .icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle-btn .icon-moon {
+  display: block;
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

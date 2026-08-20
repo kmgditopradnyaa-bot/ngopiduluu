@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id" class="page-transition page-enter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Menu Lengkap NgopiDuluu - Nikmati varian Kopi Espresso, Es Kopi Susu, Non-Kopi, Minuman Segar, Pastry & Dessert khas kami.">
+  <meta name="keywords" content="Menu NgopiDuluu, Daftar Harga Kopi, Espresso, Latte, Croissant, Dessert Cafe Jakarta">
+  <meta name="author" content="NgopiDuluu Coffee">
+  <link rel="icon" type="image/png" href="assets/favicon-transparent.png">
+  <title>Daftar Menu — NgopiDuluu</title>
+
+  <!-- CSS Modules -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/menu.css?v=3">
+  <link rel="stylesheet" href="css/dark-mode.css?v=3">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script>
+    (function () {
+      var t = 'light';
+      try { t = localStorage.getItem('ngopiduluu_theme') || 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">Ngopi<span>Duluu</span></div>
+      <div class="loading-tagline">"Diseduh Sepenuh Hati..."</div>
+      <div class="spinner-cup">
+        <svg viewBox="0 0 50 50">
+          <path d="M10,15 L40,15 L35,40 L15,40 Z" />
+          <path d="M40,20 C45,20 45,30 40,30" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/Gemini_Generated_Image_abfkhhabfkhhabfk.jfif" alt="Logo NgopiDuluu" class="nav-brand-icon">
+        Ngopi<span>Duluu</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="index.html#testimonials">Testimoni</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle-btn" data-theme-toggle title="Ganti Tema">
+          <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn" id="search-nav-btn" title="Cari Menu">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="gallery.html">Galeri</a>
+      <a href="index.html#testimonials">Testimoni</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: calc(var(--navbar-height) + 3rem); padding-bottom: 2rem; background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-color); text-align:center;">
+    <div class="container">
+      <div class="section-subtitle">Pilihan Terlengkap</div>
+      <h1 class="section-title" style="font-size:3rem;">Daftar Menu NgopiDuluu</h1>
+      <p class="section-description" style="max-width:600px; margin:0 auto;">
+        Temukan sajian racikan kopi pilihan, minuman segar non-kopi, pastry hangat, dan hidangan penutup manis khas kami.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Menu Grid Section -->
+  <section class="section">
+    <div class="container">
+      <div class="menu-controls">
+        <!-- Live Search Input -->
+        <div class="search-box-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="search-menu-input" class="search-input" placeholder="Cari nama menu (contoh: Espresso, Tiramisu, Croissant)...">
+          <button id="clear-search-btn" class="clear-search-btn">✕</button>
+        </div>
+
+        <!-- Filter Category Pills & Favorites Button -->
+        <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap; justify-content:center;">
+          <div class="category-pills" id="category-pills-container"></div>
+          <button id="fav-filter-btn" class="category-pill gallery-pill">
+            ❤️ Favorit Saya
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Grid Container -->
+      <div class="menu-grid" id="menu-grid-container"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            Ngopi<span>Duluu</span>
+          </a>
+          <p class="footer-desc">
+            "Ngopi Dulu, Baru Lanjut Cerita."<br>
+            Kedai kopi modern karya saya dengan tema dan  sajian rasa autentik, suasana nyaman, dan pelayanan ramah.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">IG</a>
+            <a href="https://tiktok.com" target="_blank" class="social-icon" title="TikTok">TT</a>
+            <a href="https://wa.me/6287764075285" target="_blank" class="social-icon" title="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Tautan Cepat</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="menu.html">Daftar Menu</a>
+            <a href="gallery.html">Galeri Foto</a>
+            <a href="faq.html">Tanya Jawab (FAQ)</a>
+            <a href="contact.html">Kontak & Reservasi</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Jam Operasional</h4>
+          <div class="footer-hours">
+            <p>Senin – Minggu <span>07:00 – 23:00 WIB</span></p>
+            <p>Hari Libur <span>Tetap Buka</span></p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Lokasi Utama</h4>
+          <p style="color:#A09890; font-size:0.9rem; line-height:1.7;">
+            Jl. Kopi Nusantara No. 88, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12190<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 NgopiDuluu Coffee Shop — Project Karya Ditoo. Hak Cipta Dilindungi.</p>
+        <p>Ngopi Dulu, Baru Lanjut Cerita ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal" id="search-modal">
+    <div class="modal-content">
+      <div class="modal-close" onclick="document.getElementById('search-modal').classList.remove('active'); document.body.style.overflow='';">✕</div>
+      <h3 style="margin-bottom:1rem; font-family:var(--font-heading);">Pencarian Menu</h3>
+      <div class="search-box-wrapper" style="max-width:100%; margin-bottom:1.5rem;">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="modal-search-input" class="search-input" placeholder="Cari nama menu...">
+      </div>
+      <div id="modal-search-results"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="back-to-top" title="Kembali ke Atas">↑</button>
+
+  <!-- JS Modules -->
+  <script src="js/localstorage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/filter.js?v=2"></script>
+  <script src="js/search.js"></script>
+
+</body>
+</html>
