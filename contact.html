@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="page-transition page-enter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Kontak & Reservasi NgopiDuluu - Hubungi kami melalui WhatsApp, Instagram, atau lakukan reservasi meja secara online.">
+  <meta name="keywords" content="Kontak NgopiDuluu, Reservasi Coffee Shop, Alamat Cafe Jakarta, WhatsApp NgopiDuluu">
+  <meta name="author" content="NgopiDuluu Coffee">
+  <link rel="icon" type="image/png" href="assets/favicon-transparent.png">
+  <title>Kontak & Reservasi — NgopiDuluu</title>
+
+  <!-- CSS Modules -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script>
+    (function () {
+      var t = 'light';
+      try { t = localStorage.getItem('ngopiduluu_theme') || 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">Ngopi<span>Duluu</span></div>
+      <div class="loading-tagline" data-i18n="loading.tagline">"Diseduh Sepenuh Hati..."</div>
+      <div class="spinner-cup">
+        <svg viewBox="0 0 50 50">
+          <path d="M10,15 L40,15 L35,40 L15,40 Z" />
+          <path d="M40,20 C45,20 45,30 40,30" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/Gemini_Generated_Image_abfkhhabfkhhabfk.jfif" alt="Logo NgopiDuluu" class="nav-brand-icon">
+        Ngopi<span>Duluu</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Beranda</a>
+        <a href="about.html" data-i18n="nav.about">Tentang Kami</a>
+        <a href="menu.html" data-i18n="nav.menu">Menu</a>
+        <a href="gallery.html" data-i18n="nav.gallery">Galeri</a>
+        <a href="index.html#testimonials" data-i18n="nav.testimonials">Testimoni</a>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">Kontak</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Dropdown -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn" id="lang-toggle-btn" aria-label="Ganti Bahasa / Switch Language" data-i18n-title="nav.title_lang" title="Ganti Bahasa">
+            <span class="lang-flag" id="current-lang-flag">🇮🇩</span>
+            <span class="lang-text" id="current-lang-code">ID</span>
+            <svg class="lang-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-option" data-lang-opt="id">
+              <span class="flag">🇮🇩</span>
+              <span>Indonesia</span>
+              <svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button class="lang-option" data-lang-opt="en">
+              <span class="flag">🇬🇧</span>
+              <span>English</span>
+              <svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button class="icon-btn theme-toggle-btn" data-theme-toggle title="Ganti Tema" data-i18n-title="nav.title_theme">
+          <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn" id="search-nav-btn" title="Cari Menu" data-i18n-title="nav.title_search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" data-i18n="nav.home">Beranda</a>
+      <a href="about.html" data-i18n="nav.about">Tentang Kami</a>
+      <a href="menu.html" data-i18n="nav.menu">Menu</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Galeri</a>
+      <a href="index.html#testimonials" data-i18n="nav.testimonials">Testimoni</a>
+      <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" class="active" data-i18n="nav.contact">Kontak</a>
+    </div>
+    <div class="mobile-lang-switcher">
+      <span class="mobile-lang-label" data-i18n="nav.title_lang">Ganti Bahasa</span>
+      <div class="mobile-lang-buttons">
+        <button class="mobile-lang-btn" data-lang-opt="id" aria-label="Bahasa Indonesia"><span class="flag">🇮🇩</span><span class="lang-name">Indonesia</span><span class="lang-code">ID</span></button>
+        <button class="mobile-lang-btn" data-lang-opt="en" aria-label="English language"><span class="flag">🇬🇧</span><span class="lang-name">English</span><span class="lang-code">EN</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="section page-hero" style="padding-top: calc(var(--navbar-height) + 3rem); padding-bottom: 2.5rem; background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-color); text-align:center;">
+    <div class="container">
+      <div class="section-subtitle" data-i18n="contact.header_sub">Mari Terhubung</div>
+      <h1 class="section-title" style="font-size:3rem;" data-i18n="contact.header_title">Kontak & Reservasi Meja</h1>
+      <p class="section-description" style="max-width:600px; margin:0 auto;" data-i18n="contact.header_desc">
+        Kami siap mendengarkan pesan, kritik, masukan, maupun reservasi meja Anda.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reservation & Contact Form -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Form -->
+        <div class="reservation-card" data-reveal="fade-up">
+          <span class="card-kicker"><span data-i18n="contact.form_kicker">Reservasi Online</span></span>
+          <h3 class="form-title"><span class="form-title-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span data-i18n="contact.form_title">Formulir Reservasi</span></h3>
+          <form id="reservation-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="res-name" data-i18n="contact.label_name">Nama Lengkap</label>
+                <input type="text" id="res-name" class="form-input" placeholder="Masukkan nama Anda" data-i18n-placeholder="contact.ph_name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-email" data-i18n="contact.label_contact">Email / Nomor WhatsApp</label>
+                <input type="text" id="res-email" class="form-input" placeholder="contoh@gmail.com / 08123456789" data-i18n-placeholder="contact.ph_contact" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-date" data-i18n="contact.label_date">Tanggal Reservasi</label>
+                <input type="date" id="res-date" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="res-time" data-i18n="contact.label_time">Jam Kedatangan</label>
+                <input type="time" id="res-time" class="form-input" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="res-guests" data-i18n="contact.label_guests">Jumlah Tamu</label>
+                <select id="res-guests" class="form-input" required>
+                  <option value="1" data-i18n="contact.opt_1">1 Orang</option>
+                  <option value="2" data-i18n="contact.opt_2">2 Orang</option>
+                  <option value="3-4" data-i18n="contact.opt_34">3 - 4 Orang</option>
+                  <option value="5+" data-i18n="contact.opt_5">5+ Orang (Grup / Nugas)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width" style="margin-top:1rem;">
+                <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="contact.btn_submit">
+                  Konfirmasi Reservasi Sekarang
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Info & Map -->
+        <div class="contact-info-stack">
+          <div class="info-card" data-reveal="fade-up">
+            <span class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.1-7-11a7 7 0 1114 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div>
+              <h4 class="info-card-title" data-i18n="contact.location_title">Lokasi Kedai NgopiDuluu</h4>
+              <p class="info-card-text" data-i18n="footer.location_addr">Jl. Kopi Nusantara No. 88, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12190</p>
+            </div>
+          </div>
+
+          <div class="info-card" data-reveal="fade-up">
+            <span class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+            <div style="flex:1;">
+              <h4 class="info-card-title" data-i18n="contact.direct_title">Kontak Langsung</h4>
+              <div class="contact-actions">
+                <a href="https://wa.me/6287764075285" class="contact-action-btn wa" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+                  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M21.11 2.89A11.9 11.9 0 0012 0C5.373 0 .01 5.373.01 12.001.01 14.216.5 16.309 1.38 18.14L0 24l6.07-1.596A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12 0-1.968-.492-3.827-1.89-5.11z"/>
+                    <path d="M17.2 14.58c-.3-.15-1.76-.87-2.04-.97-.28-.1-.48-.15-.68.15s-.78.97-.96 1.17c-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2 0-.37-.03-.52-.03-.15-.68-1.64-.93-2.25-.24-.58-.49-.5-.67-.51l-.57-.01c-.18 0-.47.07-.72.34s-.94.92-.94 2.24c0 1.31.97 2.58 1.1 2.76.13.18 1.9 2.9 4.6 3.95 2.7 1.05 2.7.7 3.19.66.5-.04 1.6-.65 1.82-1.28.22-.64.22-1.18.15-1.29-.07-.1-.26-.15-.56-.3z"/>
+                  </svg>
+                  <span data-i18n="contact.whatsapp_btn">Hubungi via WhatsApp</span>
+                </a>
+
+                <a href="https://www.instagram.com/ditooprdnyaa?igsh=MW5ra24wMXIwOTI3&igsi=MW5ra24wMXIwOTI3&igshid=MWZra24wMXIwOTI3" class="contact-action-btn ig" target="_blank" rel="noopener" aria-label="Hubungi via Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" stroke="currentColor" stroke-width="1.6" fill="none"/>
+                    <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor"/>
+                  </svg>
+                  <span data-i18n="contact.ig_btn">Hubungi via Instagram</span>
+                </a>
+              </div>
+
+              <div class="contact-email-block">
+                <h4 class="contact-email-title"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-i18n="contact.email_title">Kirim Pesan via Email</span></h4>
+                <form id="contact-form" class="email-form">
+                  <div class="email-row">
+                    <input id="contact-name" type="text" name="name" class="form-input" data-i18n-placeholder="contact.form_name_ph" placeholder="Nama" required>
+                    <input id="contact-email" type="email" name="email" class="form-input" data-i18n-placeholder="contact.form_email_ph" placeholder="Email" required>
+                  </div>
+                  <textarea id="contact-message" name="message" class="form-input" rows="4" data-i18n-placeholder="contact.form_msg_ph" placeholder="Tulis pesan Anda di sini..." required style="resize:vertical;"></textarea>
+                  <button type="submit" class="btn btn-gold" style="width:100%; margin-top:0.75rem;" data-i18n="contact.form_send_btn">Kirim Pesan</button>
+                  <p id="email-form-status" role="status" aria-live="polite" style="margin:0.75rem 0 0; color:var(--text-muted); font-size:0.9rem;"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map" data-reveal="fade-up">
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Grand+Indonesia+Jakarta" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span data-i18n="contact.map_link">Buka di Google Maps</span>
+            </a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135000001!3d-6.194741399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67323865c92!2sGrand%20Indonesia!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            Ngopi<span>Duluu</span>
+          </a>
+          <p class="footer-desc" data-i18n-html="footer.desc">
+            "Ngopi Dulu, Baru Lanjut Cerita."<br>
+            Kedai kopi modern karya saya dengan tema dan sajian rasa autentik, suasana nyaman, dan pelayanan ramah.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.title_links">Tautan Cepat</h4>
+          <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">Beranda</a>
+            <a href="about.html" data-i18n="nav.about">Tentang Kami</a>
+            <a href="menu.html" data-i18n="nav.menu">Daftar Menu</a>
+            <a href="gallery.html" data-i18n="nav.gallery">Galeri Foto</a>
+            <a href="faq.html" data-i18n="nav.faq">Tanya Jawab (FAQ)</a>
+            <a href="contact.html" data-i18n="nav.contact">Kontak & Reservasi</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.title_hours">Jam Operasional</h4>
+          <div class="footer-hours">
+            <p><span data-i18n="footer.hours_days">Senin – Minggu</span> <span data-i18n="footer.hours_open">07:00 – 23:00 WIB</span></p>
+            <p><span data-i18n="footer.hours_holiday">Hari Libur</span> <span data-i18n="footer.hours_holiday_open">Tetap Buka</span></p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.title_location">Lokasi Utama</h4>
+          <p style="color:#A09890; font-size:0.9rem; line-height:1.7;" data-i18n-html="footer.location_addr">
+            Jl. Kopi Nusantara No. 88, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12190<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 NgopiDuluu Coffee Shop — Project Karya Ditoo. Hak Cipta Dilindungi.</p>
+        <p data-i18n="footer.subcopyright">Ngopi Dulu, Baru Lanjut Cerita</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal" id="search-modal">
+    <div class="modal-content">
+      <div class="modal-close" onclick="document.getElementById('search-modal').classList.remove('active'); document.body.style.overflow='';">✕</div>
+      <h3 style="margin-bottom:1rem; font-family:var(--font-heading);" data-i18n="search.modal_title">Pencarian Menu</h3>
+      <div class="search-box-wrapper" style="max-width:100%; margin-bottom:1.5rem;">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="modal-search-input" class="search-input" placeholder="Cari nama menu..." data-i18n-placeholder="search.modal_ph">
+      </div>
+      <div id="modal-search-results"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="back-to-top" data-i18n-title="back_to_top" title="Kembali ke Atas">↑</button>
+
+  <script src="js/localstorage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/search.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/emailjs-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
